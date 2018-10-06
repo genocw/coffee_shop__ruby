@@ -30,10 +30,29 @@ class Roaster
   # update?
       # needed?
 
-  # self.all
+  def self.all()
+    sql = "
+      SELECT * FROM roasters;
+    "
+    results = SqlRunner.run(sql)
+    return results.map { |roaster_hash| Coffee.new(roaster_hash) }
+  end
 
-  # self.delete_all
+  def self.delete_all()
+    sql = "
+      DELETE FROM roasters;
+    "
+    SqlRunner.run(sql)
+  end
 
-  # .coffees
+  def coffees()
+    sql = "
+    SELECT * FROM coffees
+    WHERE roaster_id = $1;
+    "
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |coffee_hash| Coffee.new(coffee_hash) }
+  end
 
 end

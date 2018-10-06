@@ -65,7 +65,6 @@ class Coffee
   end
 
   def roaster()
-    # know roaster_id
     sql = "
       SELECT * FROM roasters
       WHERE id =  $1;
@@ -73,7 +72,6 @@ class Coffee
     values = [@roaster_id]
     results = SqlRunner.run(sql, values)
     return Roaster.new(results[0])
-    # return roaster object
 
     # does it matter that total_sold by this roaster will now be 0?
   end
