@@ -1,12 +1,11 @@
 class Roaster
 
-  attr_accessor :id, :name, :loaction, :style, :total_sold
+  attr_accessor :id, :name, :loaction, :total_sold
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
     @name = options["name"]
     @location = options["location"]
-    @style = options["style"]
     @total_sold = 0
   end
 
@@ -15,13 +14,12 @@ class Roaster
     sql = "
       INSERT INTO roasters (
         name,
-        location,
-        style
+        location
       )
       VALUES ($1, $2, $3)
       RETURNING id;
     "
-    values = [@name, @location, @style]
+    values = [@name, @location]
     results = SqlRunner.run(sql, values)
     @id = results[0]["id"].to_i
   end
