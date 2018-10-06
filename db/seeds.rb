@@ -2,6 +2,8 @@ require_relative("../models/coffee.rb")
 require_relative("../models/roaster.rb")
 require("pry")
 
+Coffee.delete_all()
+
 roaster1 = Roaster.new({
   "name"        =>  "The Barn",
   "location"    =>  "Berlin, Germany"

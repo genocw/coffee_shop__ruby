@@ -57,7 +57,12 @@ class Coffee
     return results.map { |coffee_hash| Coffee.new(coffee_hash) }
   end
 
-# self.delete_all
+  def self.delete_all()
+    sql = "
+      DELETE FROM coffees;
+    "
+    SqlRunner.run(sql)
+  end
 
 # .roaster
 
