@@ -35,12 +35,13 @@ class Coffee
         region,
         process,
         primary_taste,
-        in_stock
+        in_stock,
+        total_sold
       )
-      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
       RETURNING id;
     "
-    values = [@name, @roaster_id, @profile, @region, @process, @primary_taste, @in_stock]
+    values = [@name, @roaster_id, @profile, @region, @process, @primary_taste, @in_stock, @total_sold]
     results = SqlRunner.run(sql, values)
     @id = results[0]["id"].to_i
   end
