@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS roasters;
 DROP TABLE IF EXISTS coffees;
 
-# roasters
+
 CREATE TABLE roasters (
   id            SERIAL8 PRIMARY KEY,
   name          VARCHAR(255),
@@ -9,7 +9,6 @@ CREATE TABLE roasters (
   style         VARCHAR(255),
   total_sold     VARCHAR(255)
 );
-
 
 CREATE TABLE coffees (
   id            SERIAL8 PRIMARY KEY,
