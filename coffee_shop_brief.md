@@ -18,3 +18,5 @@ See best sellers.
 * Reviews feature: 1 customer, 1 coffee. List reviews, add new review, filter list by region/roaster/taste.
 * Add option to filter coffee list/roaster list by top rated.
 * Coming Soon section?
+* Owner views Vs User views?
+* Add coffee score?
