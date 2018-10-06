@@ -1,3 +1,5 @@
+require_relative("../db/sql_runner.rb")
+
 class Roaster
 
   attr_accessor :id, :name, :loaction, :total_sold
@@ -14,12 +16,13 @@ class Roaster
     sql = "
       INSERT INTO roasters (
         name,
-        location
+        location,
+        total_sold
       )
       VALUES ($1, $2, $3)
       RETURNING id;
     "
-    values = [@name, @location]
+    values = [@name, @location, @total_sold]
     results = SqlRunner.run(sql, values)
     @id = results[0]["id"].to_i
   end

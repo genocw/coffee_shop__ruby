@@ -12,6 +12,7 @@ See best sellers.
 * Be able to create, edit and delete roasters and coffees separately.
 * Show a list of all coffees, perhaps listings for those in stock and those coming soon.
 * Filter list by Roaster, Region, Tasting Notes, Process, Best seller, esp/filter
+* price attribute? order by..
 
 #### Possible Extensions
 
@@ -20,3 +21,4 @@ See best sellers.
 * Coming Soon section?
 * Owner views Vs User views?
 * Add coffee score?
+* Glossary of terms? go to section upon clicking link
