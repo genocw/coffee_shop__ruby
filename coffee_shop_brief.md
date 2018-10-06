@@ -14,11 +14,24 @@ See best sellers.
 * Filter list by Roaster, Region, Tasting Notes, Process, Best seller, esp/filter
 * price attribute? order by..
 
+  * CRUD
+  * view for showing all coffees
+  * be able to click on each coffee for more info
+  * view for showing all roasters
+  * be able to click on each roaster for more info
+  * filter view of all coffees by roaster_id / profile / region / process / ?
+  * filter view of roasters by location
+
 #### Possible Extensions
 
 * Reviews feature: 1 customer, 1 coffee. List reviews, add new review, filter list by region/roaster/taste.
 * Add option to filter coffee list/roaster list by top rated.
 * Coming Soon section?
 * Owner views Vs User views? (eg add new coffee, update out_of_stock)
-* Add coffee score?
 * Glossary of terms? go to section upon clicking link
+
+  * add third class and table: Reviews
+  * give coffee rating attribute, and roaster average rating attribute, which change for each new review
+  * view all reviews
+  * filter/sort all coffees/roasters by popularity
+  * owner views: add new coffee/roaster
