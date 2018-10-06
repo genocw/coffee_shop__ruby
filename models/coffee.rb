@@ -49,8 +49,16 @@ class Coffee
 # update?
     # needed?
 
-# self.all
+  def self.all()
+    sql = "
+      SELECT * FROM coffees;
+    "
+    results = SqlRunner.run(sql)
+    return results.map { |coffee_hash| Coffee.new(coffee_hash) }
+  end
 
 # self.delete_all
+
+# .roaster
 
 end

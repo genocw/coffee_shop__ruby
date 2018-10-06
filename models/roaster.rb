@@ -2,7 +2,7 @@ require_relative("../db/sql_runner.rb")
 
 class Roaster
 
-  attr_accessor :id, :name, :loaction, :total_sold
+  attr_accessor :id, :name, :location, :total_sold
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
@@ -34,5 +34,6 @@ class Roaster
 
   # self.delete_all
 
+  # .coffees
 
 end

@@ -8,7 +8,7 @@ See best sellers.
 #### MVP
 
 * Track individual coffees, inc name, roaster, region, process, esp/filter, tasting notes, in-stock/not, number sold.
-* Track roaster, inc name, location, style?, coffees sold.
+* Track roaster, inc name, location, coffees sold.
 * Be able to create, edit and delete roasters and coffees separately.
 * Show a list of all coffees, perhaps listings for those in stock and those coming soon.
 * Filter list by Roaster, Region, Tasting Notes, Process, Best seller, esp/filter
@@ -19,6 +19,6 @@ See best sellers.
 * Reviews feature: 1 customer, 1 coffee. List reviews, add new review, filter list by region/roaster/taste.
 * Add option to filter coffee list/roaster list by top rated.
 * Coming Soon section?
-* Owner views Vs User views?
+* Owner views Vs User views? (eg add new coffee, update out_of_stock)
 * Add coffee score?
 * Glossary of terms? go to section upon clicking link
