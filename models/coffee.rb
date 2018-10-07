@@ -19,7 +19,7 @@ class Coffee
 # .in_stock? method to get boolean.
       # will be distinct from attribute?
   def in_stock?()
-    if @in_stock == "true" || true
+    if @in_stock == "t" || true
       return true
     end
     return false

@@ -22,6 +22,23 @@ See best sellers.
   * filter view of all coffees by roaster_id / profile / region / process / ?
   * filter view of roasters by location
 
+  RESTful ROUTES
+  GET       /coffees                INDEX
+  GET       /coffees/:id            SHOW
+  GET       /coffees/new            NEW
+  POST      /coffees                CREATE
+  GET       /coffees/:id/edit       EDIT
+  POST      /coffees/:id            UPDATE
+  POST      /coffees/:id/delete     DESTROY
+
+  GET       /roasters                INDEX
+  GET       /roasters/:id            SHOW
+  GET       /roasters/new            NEW
+  POST      /roasters                CREATE
+  GET       /roasters/:id/edit       EDIT
+  POST      /roasters/:id            UPDATE
+  POST      /roasters/:id/delete     DESTROY
+
 #### Possible Extensions
 
 * Reviews feature: 1 customer, 1 coffee. List reviews, add new review, filter list by region/roaster/taste.
