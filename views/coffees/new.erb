@@ -6,9 +6,8 @@
   <input type="text" name="name" id="name-input">
   <br>
 
-<!-- not assigning roaster id -->
   <label for="roaster-input">Roaster</label>
-  <select name="roaster-input">
+  <select name="roaster_id" id="roaster-input">
     <% for roaster in @roasters %>
       <option value="<%= roaster.id %>"> <%= roaster.name %> </option>
     <% end %>
