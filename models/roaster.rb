@@ -55,4 +55,14 @@ class Roaster
     return results.map { |coffee_hash| Coffee.new(coffee_hash) }
   end
 
+  def self.find(id)
+    sql = "
+      SELECT * FROM roasters
+      WHERE id = $1;
+    "
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Roaster.new(results[0])
+  end
+
 end
