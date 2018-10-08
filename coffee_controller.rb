@@ -10,28 +10,55 @@ get("/") do
   erb(:land)
 end
 
-# INDEX - coffees
+# coffees
+# INDEX
 get("/beans") do
   @coffees = Coffee.all()
   erb(:"coffees/index")
 end
 
-# SHOW - coffees
+# NEW
+get("/beans/new") do
+  @roasters = Roaster.all()
+  erb(:"/coffees/new")
+end
+
+# SHOW
 get("/beans/:id") do
-  @id = params["id"].to_i
-  @coffee = Coffee.find(@id)
+  id = params["id"].to_i
+  @coffee = Coffee.find(id)
   erb(:"/coffees/show")
 end
 
-# INDEX - roasters
+# CREATE
+
+# EDIT
+
+# UPDATE
+
+# DESTROY
+
+
+# roasters
+# INDEX
 get("/roasters") do
   @roasters = Roaster.all()
   erb(:"/roasters/index")
 end
 
-# SHOW - roasters
+# SHOW
 get("/roasters/:id") do
   @id = params["id"].to_i
   @roaster = Roaster.find(@id)
   erb(:"roasters/show")
 end
+
+# NEW
+
+# CREATE
+
+# EDIT
+
+# UPDATE
+
+# DESTROY

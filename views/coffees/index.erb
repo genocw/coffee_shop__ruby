@@ -1,9 +1,10 @@
-<h1>All Our Beans</h1>
+<h1>All The Beans</h1>
 
 <% for coffee in @coffees %>
 
-  <h4><a href="/beans/<%= coffee.id %>"><%= coffee.name %></a></h4>
-  <p><%= coffee.profile %></p>
+  <a href="/beans/<%= coffee.id %>"><img id="coffee-img" src= <%= coffee.image %> > </a>
+  <h4><%= coffee.name %></h4>
+  <p>Roasted for <%= coffee.profile %></p>
   <hr>
 
 <% end %>

@@ -1,0 +1,15 @@
+<h1>Add New Coffee</h1>
+
+<form action="/coffees" method="POST">
+
+<label for="name">Name</label>
+<input type="text" name="name" id="name">
+
+<label for="roaster-input">Roaster</label>
+<select name="roaster-input">
+  <% for roaster in @roasters %>
+    <option value="<%= roaster.id %>"> <%= roaster.name %> </option>
+  <% end %>
+</select>
+
+</form>

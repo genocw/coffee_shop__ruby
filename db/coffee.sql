@@ -14,9 +14,10 @@ CREATE TABLE coffees (
   name          VARCHAR(255),
   roaster_id    INT8 REFERENCES roasters(id) ON DELETE CASCADE,
   profile       VARCHAR(255),
-  region        VARCHAR(255),
-  Process       VARCHAR(255),
+  origin        VARCHAR(255),
+  process       VARCHAR(255),
   primary_taste VARCHAR(255),
+  image         VARCHAR(255),
   in_stock      BOOLEAN,
   total_sold    INT8
 );
