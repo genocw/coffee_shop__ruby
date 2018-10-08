@@ -76,4 +76,14 @@ class Coffee
     # does it matter that total_sold by this roaster will now be 0?
   end
 
+  def self.find(id)
+    sql = "
+      SELECT * FROM coffees
+      WHERE id = $1;
+    "
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Coffee.new(results[0])
+  end
+
 end

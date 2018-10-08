@@ -1,0 +1,8 @@
+<h1>The Beans</h1>
+
+<% for coffee in @coffees %>
+
+  <h4> <a href="/coffees/<%= coffee.id %>"><%= coffee.name %></a></h4>
+  <p><%= coffee.profile %></p>
+  <hr>
+<% end %>

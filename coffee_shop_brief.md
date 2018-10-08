@@ -23,13 +23,13 @@ See best sellers.
   * filter view of roasters by location
 
   RESTful ROUTES
-  GET       /coffees                INDEX
-  GET       /coffees/:id            SHOW
-  GET       /coffees/new            NEW
-  POST      /coffees                CREATE
-  GET       /coffees/:id/edit       EDIT
-  POST      /coffees/:id            UPDATE
-  POST      /coffees/:id/delete     DESTROY
+  GET       /coffees                 INDEX
+  GET       /coffees/:id             SHOW
+  GET       /coffees/new             NEW
+  POST      /coffees                 CREATE
+  GET       /coffees/:id/edit        EDIT
+  POST      /coffees/:id             UPDATE
+  POST      /coffees/:id/delete      DESTROY
 
   GET       /roasters                INDEX
   GET       /roasters/:id            SHOW

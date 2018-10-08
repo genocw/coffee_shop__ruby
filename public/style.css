@@ -1,0 +1,84 @@
+/*
+  google fonts
+  font-family: 'Roboto', sans-serif;
+  font-family: 'K2D', sans-serif;
+  font-family: 'Poppins', sans-serif;
+ */
+
+html {
+  height: 100%;
+}
+
+.wrapper {
+  background-image: url("/images/filter_plant.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-areas:  "hd hd"
+                        "nv mn"
+                        "ft ft";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows:   2fr 5fr 1fr;
+}
+
+.wrapper > header {
+  grid-area: hd;
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  border: 2px solid black;
+}
+
+header div {
+  /* position: relative;
+  height: 100%; */
+  width: 50%;
+}
+
+header h1 {
+  font-size: 150%;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Poppins", "Helvetica", sans-serif;
+  text-transform: uppercase;
+}
+
+.wrapper nav {
+  grid-area: nv;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 7;
+  border: 2px solid black;
+  font-family: "K2D", "Helvetica", sans-serif;
+}
+
+.wrapper main {
+  grid-area: mn;
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 6;
+  border: 2px solid black;
+  font-family: "Poppins", "Helvetica", sans-serif;
+}
+
+.wrapper footer {
+  grid-area: ft;
+  grid-column: 1 / span 4;
+  grid-row: 7 / span 1;
+  font-family: "K2D", "Helvetica", sans-serif;
+  font-size: 50%;
+  color: #79a53e;
+  border: 2px solid black;
+  /* position: fixed bottom; */
+}
+
+nav a {
+  color: #79a53e;
+}
+
+/* @media (min-width: 300px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:  "hd hd"
+                          "nv mn"
+                          "ft ft"
+  } */
+/* } */

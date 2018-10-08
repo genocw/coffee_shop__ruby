@@ -2,14 +2,39 @@
 <html lang="en" dir="ltr">
 
   <head>
-    <meta charset="utf-8">
-    <title>ClanBeanz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Poppins:400,700|Roboto" rel="stylesheet">
   </head>
 
   <body>
-    <main>
-      <%= yield  %>
-    </main>
+    <section class="wrapper">
+
+      <header>
+        <div>
+          <img src="/images/panda.png" alt="">
+        </div>
+        <div>
+          <h1>Coffee Shop</h1>
+        </div>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/coffees">Coffees</a>
+          </li>
+          <li>
+            <a href="/roasters">Roasters</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <%= yield  %>
+      </main>
+
+      <footer>&copy Genna Walsh 2018</footer>
+    </section>
   </body>
 
 </html>
