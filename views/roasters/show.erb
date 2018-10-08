@@ -1,0 +1,10 @@
+<h1><%= @roaster.name %></h1>
+
+<h4>Beans from <%= @roaster.name %>:</h4>
+<% for coffee in @roaster.coffees %>
+
+<p><a href="/beans/<%= coffee.id %>"><%= coffee.name %></a></p>
+<p><%= coffee.profile %></p>
+<hr>
+
+<% end %>

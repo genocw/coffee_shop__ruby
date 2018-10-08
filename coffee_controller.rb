@@ -30,8 +30,8 @@ get("/roasters") do
 end
 
 # SHOW - roasters
-# get("roasters/:id") do
-#   @id = params["id"].to_i
-#   @roaster = Roaster.find(@id)
-#   erb(:"roasters/show")
-# end
+get("/roasters/:id") do
+  @id = params["id"].to_i
+  @roaster = Roaster.find(@id)
+  erb(:"roasters/show")
+end
