@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Coffee Shop</title>
     <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Poppins:400,700|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
   <body>
-    <section class="wrapper">
+    <div class="wrapper">
 
       <header>
-        <div>
+        <div id="logo">
+          <img src="/images/panda2.png">
+        </div>
+        <div id="title">
           <h1>Coffee Shop</h1>
         </div>
       </header>
@@ -30,8 +34,7 @@
         <%= yield  %>
       </main>
 
-      <footer>&copy Genna Walsh 2018</footer>
-    </section>
+    </div>
   </body>
 
 </html>

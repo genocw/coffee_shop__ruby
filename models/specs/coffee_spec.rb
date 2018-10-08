@@ -10,7 +10,7 @@ class TestCoffee < MiniTest::Test
       "name"            =>  "Volcan Azul",
       "roaster_id"      =>  "1",
       "profile"         =>  "Filter",
-      "region"          =>  "Costa Rica",
+      "origin"          =>  "Costa Rica",
       "process"         =>  "Natural",
       "primary_taste"   =>  "Papaya",
       "in_stock"        =>  "t"
@@ -31,8 +31,8 @@ class TestCoffee < MiniTest::Test
     assert_equal("Filter", @coffee1.profile)
   end
 
-  def test_has_region()
-    assert_equal("Costa Rica", @coffee1.region)
+  def test_has_origin()
+    assert_equal("Costa Rica", @coffee1.origin)
   end
 
   def test_has_process()
@@ -41,10 +41,6 @@ class TestCoffee < MiniTest::Test
 
   def test_has_primary_taste()
     assert_equal("Papaya", @coffee1.primary_taste)
-  end
-
-  def test_has_in_stock()
-    assert_equal("t", @coffee1.in_stock)
   end
 
   def test_is_in_stock()

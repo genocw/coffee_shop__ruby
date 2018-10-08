@@ -46,7 +46,7 @@ coffee1 = Coffee.new({
   "name"            =>  "Volcan Azul",
   "roaster_id"      =>  roaster1.id,
   "profile"         =>  "Filter",
-  "region"          =>  "Costa Rica",
+  "origin"          =>  "Costa Rica",
   "process"         =>  "Natural",
   "primary_taste"   =>  "Papaya",
   "in_stock"        =>  true
@@ -57,7 +57,7 @@ coffee2 = Coffee.new({
   "name"            =>  "La Bandera",
   "roaster_id"      =>  roaster1.id,
   "profile"         =>  "Espresso",
-  "region"          =>  "Costa Rica",
+  "origin"          =>  "Costa Rica",
   "process"         =>  "White Honey",
   "primary_taste"   =>  "Toffee",
   "in_stock"        =>  true
@@ -68,7 +68,7 @@ coffee3 = Coffee.new({
   "name"            =>  "Wolichu Wachu",
   "roaster_id"      =>  roaster1.id,
   "profile"         =>  "Espresso",
-  "region"          =>  "Ethiopia",
+  "origin"          =>  "Ethiopia",
   "process"         =>  "Washed",
   "primary_taste"   =>  "Nectarine",
   "in_stock"        =>  true
@@ -79,22 +79,66 @@ coffee4 = Coffee.new({
   "name"            =>  "Mbokam AA",
   "roaster_id"      =>  roaster1.id,
   "profile"         =>  "Filter",
-  "region"          =>  "Kenya",
+  "origin"          =>  "Kenya",
   "process"         =>  "Washed",
   "primary_taste"   =>  "Raspberry",
-  "in_stock"        => true
+  "in_stock"        =>  true
   })
 coffee4.save()
 
 binding.pry
 nil
 
-# coffee1 = Coffee.new({
-#   "name"            =>
-#   "roaster_id"      =>
-#   "profile"         =>
-#   "region"          =>
-#   "process"         =>
-#   "primary_taste"   =>
-#   "in_stock"        =>
-#   })
+coffee5 = Coffee.new({
+  "name"            =>  "Process Church",
+  "roaster_id"      =>  roaster2.id,
+  "profile"         =>  "Filter",
+  "origin"          =>  "El Salvador",
+  "process"         =>  "Washed",
+  "primary_taste"   =>  "Orange Blossom",
+  "in_stock"        =>  true
+  })
+coffee5.save()
+
+coffee5 = Coffee.new({
+  "name"            =>  "Bo and Peep",
+  "roaster_id"      =>  roaster2.id,
+  "profile"         =>  "Filter",
+  "origin"          =>  "Guatemala",
+  "process"         =>  "Washed",
+  "primary_taste"   =>  "Plum",
+  "in_stock"        =>  true
+  })
+coffee5.save()
+
+coffee6 = Coffee.new({
+  "name"            => "Dead Brick",
+  "roaster_id"      =>  roaster2.id,
+  "profile"         =>  "Espresso",
+  "origin"          =>  "Guatemala",
+  "process"         =>  "Washed",
+  "primary_taste"   =>  "Cacao",
+  "in_stock"        =>  true
+  })
+coffee6.id
+
+coffee7 = Coffee.new({
+  "name"            =>  "Black Death",
+  "roaster_id"      =>  roaster2.id,
+  "profile"         =>  "Filter",
+  "origin"          =>  "Colombia",
+  "process"         =>  "Washed",
+  "primary_taste"   =>  "Toffee Apple",
+  "in_stock"        =>  true
+  })
+coffee7.save()
+
+coffee1 = Coffee.new({
+  "name"            =>
+  "roaster_id"      =>
+  "profile"         =>
+  "origin"          =>
+  "process"         =>
+  "primary_taste"   =>
+  "in_stock"        =>
+  })
