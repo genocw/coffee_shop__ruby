@@ -1,21 +1,43 @@
 <h1>Add New Coffee</h1>
 
-<form action="/coffees" method="POST">
+<form action="/beans" method="POST">
 
-  <label for="name">Name</label>
-  <input type="text" name="name" id="name">
+  <label for="name-input">Name</label>
+  <input type="text" name="name" id="name-input">
+  <br>
 
+<!-- not assigning roaster id -->
   <label for="roaster-input">Roaster</label>
   <select name="roaster-input">
     <% for roaster in @roasters %>
       <option value="<%= roaster.id %>"> <%= roaster.name %> </option>
     <% end %>
   </select>
+  <br>
 
-  <label for="profile">Roast Profile</label>
-  <select name="profile" id="profile">
+  <label for="profile-input">Roast Profile</label>
+  <select name="profile" id="profile-input">
     <option value="Espresso">Espresso</option>
     <option value="Filter">Filter</option>
   </select>
+  <br>
+
+  <label for="origin-input">Origin</label>
+  <input type="text" name="origin" id="origin-input">
+  <br>
+
+  <label for="process-input">Process</label>
+  <input type="text" name="process" id="process-input">
+  <br>
+
+  <label for="taste-input">Primary Tasting Note</label>
+  <input type="text" name="primary_taste" id="taste-input">
+  <br>
+
+  <label for="image-link">Image URL</label>
+  <input type="text" name="image" id="image-link">
+  <br>
+
+  <input class="btn" type="submit" value="Add New Coffee">
 
 </form>

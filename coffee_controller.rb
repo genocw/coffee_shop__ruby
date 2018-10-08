@@ -31,6 +31,11 @@ get("/beans/:id") do
 end
 
 # CREATE
+post("/beans") do
+  @coffee = Coffee.new(params)
+  @coffee.save()
+  redirect to "/beans"
+end
 
 # EDIT
 
