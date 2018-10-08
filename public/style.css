@@ -5,11 +5,16 @@
   font-family: 'Poppins', sans-serif;
  */
 
+body {
+  min-height: 100%;
+}
+
 html {
   height: 100%;
 }
 
 .wrapper {
+  min-height: 100vh;
   background-image: url("/images/filter_table.jpg");
   background-size: cover;
   background-repeat: no-repeat;

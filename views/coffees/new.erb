@@ -2,14 +2,20 @@
 
 <form action="/coffees" method="POST">
 
-<label for="name">Name</label>
-<input type="text" name="name" id="name">
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name">
 
-<label for="roaster-input">Roaster</label>
-<select name="roaster-input">
-  <% for roaster in @roasters %>
-    <option value="<%= roaster.id %>"> <%= roaster.name %> </option>
-  <% end %>
-</select>
+  <label for="roaster-input">Roaster</label>
+  <select name="roaster-input">
+    <% for roaster in @roasters %>
+      <option value="<%= roaster.id %>"> <%= roaster.name %> </option>
+    <% end %>
+  </select>
+
+  <label for="profile">Roast Profile</label>
+  <select name="profile" id="profile">
+    <option value="Espresso">Espresso</option>
+    <option value="Filter">Filter</option>
+  </select>
 
 </form>
