@@ -11,18 +11,27 @@ get("/") do
 end
 
 # INDEX - coffees
-get("/coffees") do
+get("/beans") do
   @coffees = Coffee.all()
-  erb(:index)
+  erb(:"coffees/index")
 end
 
 # SHOW - coffees
-get("/coffees/:id") do
+get("/beans/:id") do
   @id = params["id"].to_i
   @coffee = Coffee.find(@id)
-  erb(:show)
+  erb(:"/coffees/show")
 end
 
 # INDEX - roasters
+get("/roasters") do
+  @roasters = Roaster.all()
+  erb(:"/roasters/index")
+end
 
 # SHOW - roasters
+# get("roasters/:id") do
+#   @id = params["id"].to_i
+#   @roaster = Roaster.find(@id)
+#   erb(:"roasters/show")
+# end

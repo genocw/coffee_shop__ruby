@@ -1,0 +1,9 @@
+<h1>The Roasters</h1>
+
+<% for roaster in @roasters %>
+
+  <h4> <a href="/roasters/<% roaster.id %>"><%= roaster.name %></a> </h4>
+  <p><%= roaster.location %></p>
+  <hr>
+
+<% end %>

@@ -35,7 +35,7 @@ class Roaster
       SELECT * FROM roasters;
     "
     results = SqlRunner.run(sql)
-    return results.map { |roaster_hash| Coffee.new(roaster_hash) }
+    return results.map { |roaster_hash| Roaster.new(roaster_hash) }
   end
 
   def self.delete_all()

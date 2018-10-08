@@ -2,7 +2,8 @@
 
 <% for coffee in @coffees %>
 
-  <h4> <a href="/coffees/<%= coffee.id %>"><%= coffee.name %></a></h4>
+  <h4><a href="/beans/<%= coffee.id %>"><%= coffee.name %></a></h4>
   <p><%= coffee.profile %></p>
   <hr>
+
 <% end %>
