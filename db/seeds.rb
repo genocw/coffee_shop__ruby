@@ -23,23 +23,17 @@ roaster3 = Roaster.new({
 })
 roaster3.save()
 
-roaster4 = Roaster.new({
-  "name"        =>  "Fortitude Coffee",
-  "location"    =>  "Edinburgh, UK"
-})
-roaster4.save()
-
-roaster5 = Roaster.new({
-  "name"        =>  "Williams & Johnson",
-  "location"    =>  "Edinburgh, UK"
-})
-roaster5.save()
-
-roaster6 = Roaster.new({
-  "name"        =>  "The Coffee Collective",
-  "location"    =>  "Copenhagen, Denmark"
-})
-roaster6.save()
+# roaster4 = Roaster.new({
+#   "name"        =>  "Fortitude Coffee",
+#   "location"    =>  "Edinburgh, UK"
+# })
+# roaster4.save()
+#
+# roaster5 = Roaster.new({
+#   "name"        =>  "Williams & Johnson",
+#   "location"    =>  "Edinburgh, UK"
+# })
+# roaster5.save()
 
 
 coffee1 = Coffee.new({

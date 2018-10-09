@@ -32,8 +32,8 @@ end
 
 # CREATE
 post("/beans") do
-  @coffee = Coffee.new(params)
-  @coffee.save()
+  @mew_coffee = Coffee.new(params)
+  @new_coffee.save()
   redirect to "/beans"
 end
 # add new coffee button somewhere
@@ -65,6 +65,11 @@ get("/roasters/:id") do
 end
 
 # CREATE
+post("/roasters") do
+  @new_roaster = Roaster.new(params)
+  @new_roaster.save()
+  redirect to "/roasters"
+end
 
 # EDIT
 
