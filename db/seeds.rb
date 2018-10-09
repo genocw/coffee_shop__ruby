@@ -111,7 +111,7 @@ coffee7 = Coffee.new({
   "primary_taste"   =>  "Cacao",
   "image"           =>  "/images/dark_arts/da_dead_brick.jpg"
   })
-coffee7.id
+coffee7.save()
 
 coffee8 = Coffee.new({
   "name"            =>  "Black Death",
@@ -123,6 +123,9 @@ coffee8 = Coffee.new({
   "image"           =>  "/images/dark_arts/da_black_death.jpg"
   })
 coffee8.save()
+
+coffee8.profile = "Omni"
+coffee8.update
 
 binding.pry
 nil

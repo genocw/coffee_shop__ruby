@@ -48,8 +48,25 @@ class Coffee
     @id = results[0]["id"].to_i
   end
 
-# update?
-    # needed?
+  def update()
+    sql = "
+      UPDATE coffees
+      SET (
+        name,
+        roaster_id,
+        profile,
+        origin,
+        process,
+        primary_taste,
+        in_stock,
+        total_sold,
+        image
+      ) = ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+      WHERE id = $10;
+    "
+    values = [@name, @roaster_id, @profile, @origin, @process, @primary_taste, @in_stock, @total_sold, @image, @id]
+    SqlRunner.run(sql, values)
+  end
 
   def self.all()
     sql = "

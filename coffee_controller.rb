@@ -46,6 +46,10 @@ get("/beans/:id/edit") do
 end
 
 # UPDATE
+post("/beans/:id") do
+  
+  redirect to "/beans"
+end
 
 # DESTROY
 
