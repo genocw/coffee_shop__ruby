@@ -36,6 +36,7 @@ header {
   /* display: grid | inline-grid; */
   display: flex;
   flex-direction: row;
+  max-height: 15em;
 }
 
 #logo {
@@ -78,8 +79,8 @@ nav a {
 }
 
 #coffee-img {
-  max-width: 20em;
-  max-height: 20em;
+  max-width: 12em;
+  max-height: 12em;
 }
 
 /* @media (min-width: 300px) {
