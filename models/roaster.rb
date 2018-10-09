@@ -41,6 +41,15 @@ class Roaster
     SqlRunner.run(sql, values)
   end
 
+  def delete
+    sql = "
+      DELETE FROM roasters
+      WHERE id = $1;
+    "
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "
       SELECT * FROM roasters;

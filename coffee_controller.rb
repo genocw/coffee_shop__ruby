@@ -60,7 +60,6 @@ post("/beans/:id/delete") do
   redirect to "/beans"
 end
 
-
 # roasters
 # INDEX
 get("/roasters") do
@@ -102,3 +101,9 @@ post("/roasters/:id") do
 end
 
 # DESTROY
+post("/roasters/:id/delete") do
+  roaster_id = params["id"].to_i
+  roaster = Roaster.find(roaster_id)
+  roaster.delete
+  redirect to "/roasters"
+end
