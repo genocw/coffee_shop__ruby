@@ -27,8 +27,19 @@ class Roaster
     @id = results[0]["id"].to_i
   end
 
-  # update?
-      # needed?
+  def update()
+    sql = "
+      UPDATE roasters
+      SET (
+        name,
+        location,
+        total_sold
+      ) = ($1, $2, $3)
+      WHERE id = $4;
+    "
+    values = [@name, @location, @total_sold, @id]
+    SqlRunner.run(sql, values)
+  end
 
   def self.all()
     sql = "

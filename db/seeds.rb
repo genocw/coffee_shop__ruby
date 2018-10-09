@@ -13,7 +13,7 @@ roaster1.save()
 
 roaster2 = Roaster.new({
   "name"        =>  "Dark Arts Coffee",
-  "location"    =>  "London, UK"
+  "location"    =>  "London"
 })
 roaster2.save()
 
@@ -22,6 +22,9 @@ roaster3 = Roaster.new({
   "location"    =>  "Sussex, UK"
 })
 roaster3.save()
+
+roaster2.location = "London, UK"
+roaster2.update
 
 # roaster4 = Roaster.new({
 #   "name"        =>  "Fortitude Coffee",
