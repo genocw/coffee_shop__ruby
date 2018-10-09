@@ -89,5 +89,10 @@ get("/roasters/:id/edit") do
 end
 
 # UPDATE
+post("/roasters/:id") do
+  roaster = Roaster.new(params)
+  roaster.update
+  redirect to "/roasters"
+end
 
 # DESTROY
