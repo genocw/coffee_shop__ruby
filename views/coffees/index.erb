@@ -4,12 +4,14 @@
 <br>
 <hr>
 
+
 <% for coffee in @coffees %>
 
   <a href="/beans/<%= coffee.id %>"><img id="coffee-img" src= <%= coffee.image %> > </a>
   <h4><%= coffee.name %></h4>
+  <p> <%= coffee.id %> </p>
   <p>Roasted for <%= coffee.profile %></p>
-  
+
   <hr>
 
 <% end %>

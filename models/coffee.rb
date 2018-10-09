@@ -76,6 +76,34 @@ class Coffee
     return results.map { |coffee_hash| Coffee.new(coffee_hash) }
   end
 
+# sort by roaster in sql:
+  def self.all_by_roaster
+    sql = "
+    SELECT coffees.* FROM
+    coffees INNER JOIN roasters
+    ON coffees.roaster_id = roasters.id
+    ORDER BY roasters.name ASC;
+    "
+    results = SqlRunner.run(sql)
+    return results.map { |coffee_hash| Coffee.new(coffee_hash) }
+  end
+
+# sort by roaster in ruby:
+  def self.all_by_roaster
+    return self.all.sort {|a, b| a.roaster.name <=> b.roaster.name }
+  end
+
+  # # ordered all function
+  # # Selection
+  # SELECT coffees.* FROM
+  # # Table
+  # coffees INNER JOIN roasters
+  # ON coffee.roaster_id = roaster.id
+  # # Sort
+  # ORDER BY roasters.name ASC;
+  #
+  # return self.all.sort {||}
+
   def self.delete_all()
     sql = "
       DELETE FROM coffees;

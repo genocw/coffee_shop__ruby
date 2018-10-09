@@ -13,7 +13,7 @@ end
 # coffees
 # INDEX
 get("/beans") do
-  @coffees = Coffee.all()
+  @coffees = Coffee.all_by_roaster()
   erb(:"coffees/index")
 end
 
@@ -32,7 +32,7 @@ end
 
 # CREATE
 post("/beans") do
-  @mew_coffee = Coffee.new(params)
+  @new_coffee = Coffee.new(params)
   @new_coffee.save()
   redirect to "/beans"
 end
@@ -47,7 +47,8 @@ end
 
 # UPDATE
 post("/beans/:id") do
-  
+  coffee = Coffee.new(params)
+  coffee.update
   redirect to "/beans"
 end
 
