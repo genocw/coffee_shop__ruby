@@ -36,9 +36,14 @@ post("/beans") do
   @new_coffee.save()
   redirect to "/beans"
 end
-# add new coffee button somewhere
 
 # EDIT
+get("/beans/:id/edit") do
+  coffee_id = params["id"].to_i
+  @coffee = Coffee.find(coffee_id)
+  @roasters = Roaster.all()
+  erb(:"coffees/edit")
+end
 
 # UPDATE
 

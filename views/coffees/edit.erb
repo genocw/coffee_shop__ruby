@@ -1,0 +1,55 @@
+<h1>Edit Coffee</h1>
+
+<form action="/beans/<%= @coffee.id %>" method="POST">
+
+  <label for="name-input">Name</label>
+  <input value="<%= @coffee.name %>" type="text" name="name" id="name-input">
+  <br>
+
+  <label for="roaster-input">Roaster</label>
+  <select name="roaster_id" id="roaster-input">
+    <% for roaster in @roasters %>
+      <option value="<%= roaster.id %>"
+        <%= "selected" if roaster.id == @coffee.roaster_id %>
+      ><%= roaster.name %></option>
+    <% end %>
+  </select>
+  <br>
+
+  <label for="profile-input">Roast Profile</label>
+  <select name="profile" id="profile-input">
+    <option value="Espresso"
+      <%= "selected" if @coffee.profile == "Espresso"%>
+    >Espresso</option>
+    <option value="Filter"
+      <%= "selected" if @coffee.profile == "Filter"%>
+    >Filter</option>
+    <option value="Decaf"
+      <%= "selected" if @coffee.profile == "Decaf"%>
+    >Decaf</option>
+    <option value="Omni"
+      <%= "selected" if @coffee.profile == "Omni"%>
+    >Omni</option>
+  </select>
+  <br>
+
+  <label for="origin-input">Origin</label>
+  <input value="<%= @coffee.origin %>" type="text" name="origin" id="origin-input">
+  <br>
+
+  <label for="process-input">Process</label>
+  <input value="<%= @coffee.process %>" type="text" name="process" id="process-input">
+  <br>
+
+  <label for="taste-input">Primary Tasting Note</label>
+  <input value="<%= @coffee.primary_taste %>" type="text" name="primary_taste" id="taste-input">
+  <br>
+
+  <label for="image-link">Image URL</label>
+  <input value="<%= @coffee.image %>" type="text" name="image" id="image-link">
+  <br>
+  <hr>
+
+  <input class="btn" type="submit" value="Update Coffee">
+
+</form>
