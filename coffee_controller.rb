@@ -53,6 +53,12 @@ post("/beans/:id") do
 end
 
 # DESTROY
+post("/beans/:id/delete") do
+  coffee_id = params["id"].to_i
+  coffee = Coffee.find(coffee_id)
+  coffee.delete
+  redirect to "/beans"
+end
 
 
 # roasters

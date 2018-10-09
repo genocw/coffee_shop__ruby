@@ -68,6 +68,15 @@ class Coffee
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "
+      DELETE FROM coffees
+      WHERE id = $1;
+    "
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "
       SELECT * FROM coffees;
@@ -133,5 +142,6 @@ class Coffee
     return Coffee.new(results[0]) if results.count > 0
     return nil
   end
+
 
 end

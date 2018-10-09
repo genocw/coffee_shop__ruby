@@ -11,6 +11,9 @@
   <h4><%= coffee.name %></h4>
   <p>Roasted for <%= coffee.profile %></p>
   <a href="/beans/<%= coffee.id %>/edit">Edit Coffee</a>
+  <form  action="/beans/<%= coffee.id %>/delete" method="post">
+    <input type="submit" name="" value="Delete Coffee">
+  </form>
   <hr>
 
 <% end %>
