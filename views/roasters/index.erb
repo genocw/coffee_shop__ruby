@@ -1,5 +1,9 @@
 <h1>The Roasters</h1>
 
+<a href="/roasters/new"> Add New Roaster</a>
+<br>
+<hr>
+
 <% for roaster in @roasters %>
 
   <h4><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h4>
