@@ -82,6 +82,11 @@ post("/roasters") do
 end
 
 # EDIT
+get("/roasters/:id/edit") do
+  roaster_id = params["id"].to_i
+  @roaster = Roaster.find(roaster_id)
+  erb(:"roasters/edit")
+end
 
 # UPDATE
 

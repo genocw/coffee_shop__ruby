@@ -1,0 +1,13 @@
+<h1>Edit Roaster</h1>
+
+<form action="/roasters<%= @roaster.id %>" method="post">
+
+  <label for="name-input">Name</label>
+  <input value="<%= @roaster.name %>" type="text" name="name" id="name-input">
+
+  <label for="location-input">Location</label>
+  <input value="<%= @roaster.location %>" type="text" name="location" id="location-input">
+
+  <input type="submit" value="Update">
+
+</form>
