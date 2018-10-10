@@ -7,7 +7,7 @@
 <% for roaster in @roasters %>
 
   <h4><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h4>
-  <a href="/roasters/<%= roaster.id %>"><img src="<%= roaster.image %>"></a>
+  <a href="/roasters/<%= roaster.id %>"><img id="roaster_img" src="<%= roaster.image %>"></a>
   <h5><%= roaster.location %></h5>
   <p><%= roaster.blurb_sml %></p>
   <form action="/roasters/<%= roaster.id %>/delete" method="post">

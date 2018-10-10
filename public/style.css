@@ -81,6 +81,11 @@ nav a {
   max-height: 12em;
 }
 
+#roaster_img {
+  max-width: 12em;
+  max-height: 12em;
+}
+
 /* @media (min-width: 300px) {
   .wrapper {
     grid-template-columns: 1fr 3fr;
