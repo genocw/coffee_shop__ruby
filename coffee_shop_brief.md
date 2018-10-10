@@ -19,14 +19,21 @@
           * price attribute? order by..
 
       * CRUD
+      √
       * view for showing all coffees
+      √
       * be able to click on each coffee for more info
+      √
       * view for showing all roasters
+      √
       * be able to click on each roaster for more info
+---->
       * filter view of all coffees by roaster / profile / origin / process / taste / (ext: Rating)
+---->
       * filter view of roasters by rating? (ext)
+---->
 
-      RESTful ROUTES
+√     RESTful ROUTES
       GET       /coffees                 INDEX
       GET       /coffees/:id             SHOW
       GET       /coffees/new             NEW
@@ -45,11 +52,10 @@
 
     #### Possible Extensions
 
-    * Reviews feature: 1 customer, 1 coffee. List reviews, add new review, filter list by origin/roaster/taste.
+    * Reviews feature: name / coffee / roaster / date. Log reviews, add new review.
     * Add option to filter coffee list/roaster list by top rated.
 
       * add third class and table: Reviews
-      * give coffee rating attribute, and roaster average rating attribute, which change for each new review
-      * view all reviews
+      * give coffee rating attribute, and roaster average rating attribute, which change for each new review.
+      * add info about "out of ___ reviews"
       * filter/sort all coffees/roasters by popularity
-      * owner views: add new coffee/roaster
