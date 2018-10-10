@@ -43,10 +43,6 @@ class TestCoffee < MiniTest::Test
     assert_equal("Papaya", @coffee1.primary_taste)
   end
 
-  def test_is_in_stock()
-    assert_equal(true, @coffee1.in_stock?)
-  end
-
   def test_has_total_sold()
     assert_equal(0, @coffee1.total_sold)
   end
