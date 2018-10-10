@@ -16,11 +16,10 @@ get("/beans") do
   @coffees = Coffee.all_by_roaster()
   # grouped by roaster instead of db order
   @roasters = Roaster.all()
-  @title = "All The Beans"
-  @show_add_button = false
   # needed to filter list by roaster
+  @title = "All The Beans"
+  @show_add_new_coffee_button = true
   erb(:"coffees/index")
-  # p @title.to_s
 end
 
 # NEW
