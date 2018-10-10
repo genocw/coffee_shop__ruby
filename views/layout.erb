@@ -6,36 +6,34 @@
     <title>Bamboozle</title>
     <link rel="icon" href="/images/panda.png" />
     <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Poppins:400,700|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style2.css">
   </head>
 
-  <body>
-    <header>
-      <div id="logo">
-        <img src="/images/panda.png">
-      </div>
-      <div id="title">
-        <h1>Bamboozle</h1>
-      </div>
-    </header>
+  <body class="wrapper">
 
-    <div class="wrapper" id="main-wrap">
-      <nav class="sidebar">
-        <ul>
-          <li>
-            <a href="/beans">Coffees</a>
-          </li>
-          <li>
-            <a href="/roasters">Roasters</a>
-          </li>
-        </ul>
-      </nav>
-
-      <main>
-        <%= yield  %>
-      </main>
-
+    <div class="box a" id="logo">
+      <img src="/images/panda.png">
     </div>
+
+    <div class="box b" id="title">
+      <h1>Bamboozle</h1>
+    </div>
+
+    <nav class="box c" id="nav">
+      <ul>
+        <li>
+          <a href="/beans">Coffees</a>
+        </li>
+        <li>
+          <a href="/roasters">Roasters</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="box d" id="main">
+      <%= yield  %>
+    </section>
+
   </body>
 
 </html>

@@ -1,0 +1,38 @@
+
+
+.wrapper {
+  height: 100vh;
+  /* width: 100%; */
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+  grid-template-rows: repeat(auto-fit, [row] 1fr);
+  background-color: #444444;
+  color: papayawhip;
+}
+
+.box {
+  /* min-width: 100vw; */
+  background-color: GoldenRod;
+  color: #444444;
+}
+
+.a {
+  grid-column: col 1 / span 1;
+  grid-row: row 1 / span 2;
+}
+
+.b {
+  grid-column: col 2 / span 4;
+  grid-row: row 1 / span 1;
+}
+
+.c {
+  grid-column: col 2 / span 4;
+  grid-row: row 2 / span 1;
+}
+
+.d {
+  grid-column: col 1 / span 5;
+  grid-row: row 3 / span 8;
+}
