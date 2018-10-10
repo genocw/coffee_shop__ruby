@@ -1,3 +1,5 @@
+# RUN BEFORE blurb_seeds.rb
+
 require_relative("../models/coffee.rb")
 require_relative("../models/roaster.rb")
 require("pry")
@@ -130,8 +132,8 @@ coffee8.save()
 coffee8.profile = "Omni"
 coffee8.update
 
-binding.pry
-nil
+# binding.pry
+# nil
 
 # coffee1 = Coffee.new({
 #   "name"            =>

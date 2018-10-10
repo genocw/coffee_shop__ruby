@@ -2,7 +2,7 @@ require_relative("../db/sql_runner.rb")
 
 class Roaster
 
-  attr_accessor :id, :name, :location, :total_sold, :blurb_sml
+  attr_accessor :id, :name, :location, :total_sold, :blurb_sml, :blurb_lrg
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]

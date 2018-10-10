@@ -7,7 +7,9 @@
 <% for roaster in @roasters %>
 
   <h4><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h4>
-  <p><%= roaster.location %></p> 
+  <a href="/roasters/<%= roaster.id %>"><img src="/images/barn/barn3.png"></a>
+  <h5><%= roaster.location %></h5>
+  <p><%= roaster.blurb_sml %></p>
   <form action="/roasters/<%= roaster.id %>/delete" method="post">
     <input type="submit" value="Delete Roaster">
   </form>
