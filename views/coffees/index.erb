@@ -1,25 +1,33 @@
 <nav>
-  <%
-  # allows filter coffee by roaster to also use index.erb
-  if @roaster == nil %>
-    <h2>All The Beans</h2>
+
+  <h2><%=@title%></h2>
+
+  <% if @show_add_button == true %>
     <a href="/beans/new"> Add New Coffee</a>
-    <% else %>
-    <h2>Beans from <%= @roaster.name %></h2>
   <% end %>
 
-  <form action="/beans/filter" method="get">
+  <form action="/beans/filter-roaster" method="get">
     <label for="filter_roaster">Filter List by Roaster:</label>
     <select name="roaster_id" id="filter_roaster">
       <% for roaster in @roasters %>
         <option value="<%= roaster.id %>"><%= roaster.name %></option>
       <% end %>
     </select>
-      <input type="submit" value="Go">
+    <input type="submit" value="Go">
+  </form>
+
+  <form action="/beans/filter-profile" method="get">
+    <label for="filter_profile">Filter List by Roast Profile:</label>
+    <select name="roast_profile" id="filter_profile">
+        <option value="Espresso">Espresso</option>
+        <option value="Filter">Filter</option>
+        <option value="Decaf">Decaf</option>
+        <option value="Omni">Omni</option>
+    </select>
+    <input type="submit" value="Go">
   </form>
 
 </nav>
-
 
 <% for coffee in @coffees %>
 

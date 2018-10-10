@@ -16,8 +16,11 @@ get("/beans") do
   @coffees = Coffee.all_by_roaster()
   # grouped by roaster instead of db order
   @roasters = Roaster.all()
+  @title = "All The Beans"
+  @show_add_button = false
   # needed to filter list by roaster
   erb(:"coffees/index")
+  # p @title.to_s
 end
 
 # NEW
@@ -27,13 +30,24 @@ get("/beans/new") do
 end
 
 # FILTER
-get("/beans/filter") do
+get("/beans/filter-roaster") do
   roaster_id = params["roaster_id"].to_i
   @roaster = Roaster.find(roaster_id)
+  @title = "All Beans by #{@roaster.name}"
   @coffees = @roaster.coffees
   @roasters = Roaster.all()
   erb(:"/coffees/index")
 end
+
+# FILTER
+get("/beans/filter-profile") do
+  profile = params["roast_profile"]
+  @title = "All #{profile} Roasted Beans"
+  @coffees = Coffee.find_by_profile(profile)
+  @roasters = Roaster.all()
+  erb(:"/coffees/index")
+end
+
 
 # SHOW
 get("/beans/:id") do
@@ -89,6 +103,7 @@ get("/roasters/filter") do
   roaster_id = params["roaster_id"].to_i
   @roaster = Roaster.find(roaster_id)
   @coffees = @roaster.coffees
+  @title = "All Beans by #{@roaster.name}"
   erb(:"/coffees/index")
 end
   # re-using coffees/index.erb to list multiple coffees
