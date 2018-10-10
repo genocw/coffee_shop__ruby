@@ -22,5 +22,5 @@ CREATE TABLE coffees (
   primary_taste VARCHAR(255),
   image         VARCHAR(255),
   in_stock      BOOLEAN,
-  total_sold    INT8
+  rating        DECIMAL(3, 1)
 );
