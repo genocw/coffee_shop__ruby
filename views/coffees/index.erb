@@ -1,9 +1,11 @@
-<h2>All The Beans</h2>
-
+<% if @roaster == nil %>
+  <h2>All The Beans</h2>
+  <% else %>
+  <h2>Beans from <%= @roaster.name %></h2>
+<% end %>
 <a href="/beans/new"> Add New Coffee</a>
 <br>
 <hr>
-
 
 <% for coffee in @coffees %>
 

@@ -72,6 +72,16 @@ get("/roasters/new") do
   erb(:"roasters/new")
 end
 
+# FILTER
+get("/roasters/filter") do
+  roaster_id = params["roaster_id"].to_i
+  @roaster = Roaster.find(roaster_id)
+  @coffees = @roaster.coffees
+  erb(:"/coffees/index")
+end
+  # re-using coffees/index.erb to list multiple coffees
+  # curently has ALL THE BEANS
+
 # SHOW
 get("/roasters/:id") do
   @id = params["id"].to_i
@@ -107,6 +117,3 @@ post("/roasters/:id/delete") do
   roaster.delete
   redirect to "/roasters"
 end
-
-# FILTER
-get("/roasters/filter/:option")

@@ -58,7 +58,7 @@ nav ul {
   list-style: none;
 }
 
-nav #sidebar {
+.wrapper nav {
   grid-area: nv;
   grid-column: 1 / span 1;
   border: 1px solid red;
