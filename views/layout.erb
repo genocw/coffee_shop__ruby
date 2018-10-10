@@ -9,29 +9,33 @@
     <link rel="stylesheet" href="/style2.css">
   </head>
 
-  <body class="wrapper">
+  <body>
 
-    <div class="box a" id="logo">
-      <img src="/images/panda.png">
-    </div>
+    <section class="wrapper">
 
-    <div class="box b" id="title">
-      <h1>Bamboozle</h1>
-    </div>
+      <div class="box a" id="logo">
+        <img src="/images/panda.png">
+      </div>
 
-    <nav class="box c" id="nav">
-      <ul>
-        <li>
-          <a href="/beans">Coffees</a>
-        </li>
-        <li>
-          <a href="/roasters">Roasters</a>
-        </li>
-      </ul>
-    </nav>
+      <div class="box b" id="title">
+        <h1>Bamboozle</h1>
+      </div>
 
-    <section class="box d" id="main">
-      <%= yield  %>
+      <nav class="box c" id="nav">
+        <ul>
+          <li>
+            <a href="/beans">Coffees</a>
+          </li>
+          <li>
+            <a href="/roasters">Roasters</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="box d" id="main">
+        <%= yield  %>
+      </section>
+
     </section>
 
   </body>
