@@ -6,7 +6,7 @@ CREATE TABLE roasters (
   id            SERIAL8 PRIMARY KEY,
   name          VARCHAR(255),
   location      VARCHAR(255),
-  total_sold    VARCHAR(255),
+  rating        DECIMAL(3, 1),
   image         VARCHAR(255),
   blurb_sml     TEXT,
   blurb_lrg     TEXT
