@@ -107,3 +107,6 @@ post("/roasters/:id/delete") do
   roaster.delete
   redirect to "/roasters"
 end
+
+# FILTER
+get("/roasters/filter/:option")
