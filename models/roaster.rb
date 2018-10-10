@@ -2,15 +2,16 @@ require_relative("../db/sql_runner.rb")
 
 class Roaster
 
-  attr_accessor :id, :name, :location, :total_sold, :blurb_sml, :blurb_lrg
+  attr_accessor :id, :name, :location, :total_sold, :blurb_sml, :blurb_lrg, :image
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
     @name = options["name"]
     @location = options["location"]
     @total_sold = 0
-    @blurb_sml = options["blurb_sml"] if options["blurb_sml"]
-    @blurb_lrg = options["blurb"] if options["blurb_lrg"]
+    @blurb_sml = options["blurb_sml"]
+    @blurb_lrg = options["blurb"]
+    @image = options["image"]
   end
 
   # .save
@@ -21,12 +22,13 @@ class Roaster
         location,
         total_sold,
         blurb_sml,
-        blurb_lrg
+        blurb_lrg,
+        image
       )
-      VALUES ($1, $2, $3, $4, $5)
+      VALUES ($1, $2, $3, $4, $5, $6)
       RETURNING id;
     "
-    values = [@name, @location, @total_sold, @blurb_sml, @blurb_lrg]
+    values = [@name, @location, @total_sold, @blurb_sml, @blurb_lrg, @image]
     results = SqlRunner.run(sql, values)
     @id = results[0]["id"].to_i
   end
@@ -39,11 +41,12 @@ class Roaster
         location,
         total_sold,
         blurb_sml,
-        blurb_lrg
-      ) = ($1, $2, $3, $4, $5)
-      WHERE id = $6;
+        blurb_lrg,
+        image
+      ) = ($1, $2, $3, $4, $5, $6)
+      WHERE id = $7;
     "
-    values = [@name, @location, @total_sold, @blurb_sml, @blurb_lrg, @id]
+    values = [@name, @location, @total_sold, @blurb_sml, @blurb_lrg, @image, @id]
     SqlRunner.run(sql, values)
   end
 
