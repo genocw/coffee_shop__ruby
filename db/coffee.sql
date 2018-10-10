@@ -7,7 +7,8 @@ CREATE TABLE roasters (
   name          VARCHAR(255),
   location      VARCHAR(255),
   total_sold    VARCHAR(255),
-  blurb         TEXT
+  blurb_sml     TEXT,
+  blurb_lrg     TEXT  
 );
 
 CREATE TABLE coffees (
