@@ -9,19 +9,22 @@ Roaster.delete_all()
 
 roaster1 = Roaster.new({
   "name"        =>  "The Barn",
-  "location"    =>  "Berlin, Germany"
+  "location"    =>  "Berlin, Germany",
+  "image"       =>  "/images/barn/barn.jpg"
 })
 roaster1.save()
 
 roaster2 = Roaster.new({
   "name"        =>  "Dark Arts Coffee",
-  "location"    =>  "London"
+  "location"    =>  "London",
+  "image"       =>  "/images/dark_arts/darkarts.jpg"
 })
 roaster2.save()
 
 roaster3 = Roaster.new({
   "name"        =>  "Crafthouse Coffee",
-  "location"    =>  "Sussex, UK"
+  "location"    =>  "Sussex, UK",
+  "image"       =>  "/images/crafthouse/crafthouse.jpg"
 })
 roaster3.save()
 
