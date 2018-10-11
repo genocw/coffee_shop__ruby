@@ -38,7 +38,31 @@ body {
 
 .d {
   grid-area: mn;
+  display: grid;
+  /* grid-template-areas:   "top top"
+                         "left right"; */
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 6fr; */
 }
+
+.e {
+  grid-area: top;
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.f {
+  grid-area: left;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.g {
+  grid-area: right;
+  grid-column: 2;
+  grid-row: 2;
+}
+
 
 section div img {
   max-width: 100%;
