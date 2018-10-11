@@ -1,5 +1,6 @@
 body {
-  background-image: url("/images/filter_table.jpg");
+  /* background-image: url("/images/filter_table.jpg"); */
+  background-color: papayawhip;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
