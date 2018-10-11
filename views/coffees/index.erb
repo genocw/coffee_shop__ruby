@@ -3,7 +3,9 @@
   <h2><%=@title%></h2>
 
   <% if @show_add_new_coffee_button == true %>
-    <a href="/beans/new"> Add New Coffee</a>
+    <form  action="/beans/new" method="get">
+      <input type="submit" name="" value="Add New Coffee">
+    </form>
   <% end %>
 
   <form action="/beans/filter-roaster" method="get">
