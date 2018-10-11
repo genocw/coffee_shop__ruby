@@ -21,3 +21,18 @@ roaster3.update
 coffee1 = Coffee.find(5)
 coffee1.blurb = "Born into a coffee producing family, owner Jose Alfonso has always known that he would one day run a farm of his own. Learning about coffee management and processing from his father as a child, by the time he started he already had a strong drive to insure his farm exceeds the quality of his parents. He has been managing Finca Talquezalar full time for 15 years, and 8 years ago moved to growing specialty coffee. He’s currently working to increase the harvest yield, increasing the area of the farm growing coffee from the current 8 hectares. Sugar cane sweetness, red grape mouthfeel and delicate orange blossom notes."
 coffee1.save
+
+# BLACK DEATH
+coffee2 = Coffee.find(8)
+coffee2.blurb = "This coffee comes from the Inza region of Colombia which has been making a name for itself as a great coffee producing region since the early 2000s. This area is also of great interest to archaeologists with the nearby Tierradentro, a national park containing 64 subterranean tombs dating back to the 6th century A.D. They are decorated with geometric patterns in red representing life, black, death and white the hope of passing to the next life. Milk chocolate body, apple acidity, floral notes and sugary sweet."
+coffee2.save
+
+# BO & PEEP
+coffee3 = Coffee.find(6)
+coffee3.blurb = "In the west of Huehuetenango, located in the jacalteco speaking region lies the pre-hispanic town of San Antonio Huista. This is the closest town to this farm, which is owned and founded by Criselio de Leon. Working with his son David they have been pushing towards better crop quality and environmental practices, like enforcing a no hunting policy in the farm and better water practices. Plum acidity, with a milky mouthfeel cinder toffee sweetness and notes of punes."
+coffee3.save
+
+# DEAD BRICK
+coffee4 = Coffee.find(7)
+coffee4.blurb = "In the west of Huehuetenango, located in the jacalteco speaking region lies the pre-hispanic town of San Antonio Huista. This is the closest town to this farm, which is owned and founded by Criselio de Leon. Working with his son David they have been pushing towards better crop quality and environmental practices, like enforcing a no hunting policy in the farm and better water practices. Plum acidity, with a milky mouthfeel cinder toffee sweetness and notes of punes."
+coffee4.save

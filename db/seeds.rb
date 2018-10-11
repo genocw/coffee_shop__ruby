@@ -127,7 +127,7 @@ coffee8 = Coffee.new({
   "profile"         =>  "Filter",
   "origin"          =>  "Colombia",
   "process"         =>  "Washed",
-  "primary_taste"   =>  "Toffee Apple",
+  "primary_taste"   =>  "Milk Choclate & Apple",
   "image"           =>  "/images/dark_arts/da_black_death.jpg"
   })
 coffee8.save()
