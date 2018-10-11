@@ -9,14 +9,16 @@
 </div>
 
 <div class="right">
-  <h4><%= @coffee.name %></h4>
-  <p>Roasted by <%= @coffee.roaster.name %> in <%= @coffee.roaster.location %></p>
+  <h3><a href="/beans/<%= @coffee.id %>"><%= @coffee.name %></a></h3>
+  <h4>Roasted by <%= @coffee.roaster.name %> in <%= @coffee.roaster.location %></h4>
+
   <p>Origin: <%= @coffee.origin %></p>
   <p>Process: <%= @coffee.process %></p>
-  <p>Tastes like: <%= @coffee.primary_taste %></p><% if @coffee.profile == "Omni" %>
-  <p>Roasted for both Espresso and Filter</p>
+  <p>Tastes like: <%= @coffee.primary_taste %></p>
+  <% if @coffee.profile == "Omni" %>
+    <p>Roasted for both Espresso and Filter</p>
   <% else %>
-  <p>Roasted for <%= @coffee.profile %></p>
+    <p>Roasted for <%= @coffee.profile %></p>
   <% end %>
   <p><%= @coffee.blurb %></p>
 </div>
