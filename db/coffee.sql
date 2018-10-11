@@ -21,7 +21,6 @@ CREATE TABLE coffees (
   process       VARCHAR(255),
   primary_taste VARCHAR(255),
   image         VARCHAR(255),
-  in_stock      BOOLEAN,
   rating        DECIMAL(3, 1),
-  blurb     TEXT
+  blurb         TEXT
 );

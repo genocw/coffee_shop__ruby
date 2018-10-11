@@ -2,7 +2,7 @@ require_relative("../db/sql_runner.rb")
 
 class Coffee
 
-  attr_accessor :id, :name, :roaster_id, :profile, :origin, :process, :primary_taste, :in_stock, :rating, :image
+  attr_accessor :id, :name, :roaster_id, :profile, :origin, :process, :primary_taste, :blurb, :rating, :image
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
@@ -13,7 +13,7 @@ class Coffee
     @process = options["process"]
     @primary_taste = options["primary_taste"]
     @image = options["image"]
-    @in_stock = true
+    @blurb = options["blurb"]
     @rating = 0
   end
 
@@ -27,14 +27,14 @@ class Coffee
         origin,
         process,
         primary_taste,
-        in_stock,
+        blurb,
         rating,
         image
       )
       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
       RETURNING id;
     "
-    values = [@name, @roaster_id, @profile, @origin, @process, @primary_taste, @in_stock, @rating, @image]
+    values = [@name, @roaster_id, @profile, @origin, @process, @primary_taste, @blurb, @rating, @image]
     results = SqlRunner.run(sql, values)
     @id = results[0]["id"].to_i
   end
@@ -49,13 +49,13 @@ class Coffee
         origin,
         process,
         primary_taste,
-        in_stock,
+        blurb,
         rating,
         image
       ) = ($1, $2, $3, $4, $5, $6, $7, $8, $9)
       WHERE id = $10;
     "
-    values = [@name, @roaster_id, @profile, @origin, @process, @primary_taste, @in_stock, @rating, @image, @id]
+    values = [@name, @roaster_id, @profile, @origin, @process, @primary_taste, @blurb, @rating, @image, @id]
     SqlRunner.run(sql, values)
   end
 
