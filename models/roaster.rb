@@ -10,7 +10,7 @@ class Roaster
     @location = options["location"]
     @rating = 0
     @blurb_sml = options["blurb_sml"]
-    @blurb_lrg = options["blurb"]
+    @blurb_lrg = options["blurb_lrg"]
     @image = options["image"]
   end
 
