@@ -89,9 +89,9 @@ class Coffee
   end
 
 # sort by roaster in ruby:
-  def self.all_by_roaster
-    return self.all.sort {|a, b| a.roaster.name <=> b.roaster.name }
-  end
+  # def self.all_by_roaster
+  #   return self.all.sort {|a, b| a.roaster.name <=> b.roaster.name }
+  # end
 
   def self.delete_all()
     sql = "

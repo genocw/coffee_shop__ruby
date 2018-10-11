@@ -102,6 +102,7 @@ end
 # FILTER
 get("/roasters/filter-name") do
   roaster_id = params["roaster_id"].to_i
+  @roasters = Roaster.all()
   @roaster = Roaster.find(roaster_id)
   @coffees = @roaster.coffees
   @title = "Coffees from #{@roaster.name}"
