@@ -1,6 +1,8 @@
 <div class="left">
   <a href="/beans/<%= @coffee.id %>"><img id="coffee-img" src= <%= @coffee.image %> > </a>
-  <a href="/beans/<%= @coffee.id %>/edit">Edit Coffee</a>
+  <form  action="/beans/<%= @coffee.id %>/edit" method="get">
+    <input type="submit" name="" value="Edit Coffee">
+  </form>
   <form  action="/beans/<%= @coffee.id %>/delete" method="post">
     <input type="submit" name="" value="Delete Coffee">
   </form>

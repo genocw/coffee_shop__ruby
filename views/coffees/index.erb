@@ -31,17 +31,28 @@
 
 <% for coffee in @coffees %>
 
+<div class="left">
   <a href="/beans/<%= coffee.id %>"><img id="coffee-img" src= <%= coffee.image %> > </a>
-  <h4><%= coffee.name %></h4>
-  <% if coffee.profile == "Omni" %>
-    <p>Roasted for both Espresso and Filter</p>
-  <% else %>
-    <p>Roasted for <%= coffee.profile %></p>
-  <% end %>
-  <a href="/beans/<%= coffee.id %>/edit">Edit Coffee</a>
+  <form  action="/beans/<%= coffee.id %>/edit" method="get">
+    <input type="submit" name="" value="Edit Coffee">
+  </form>
   <form  action="/beans/<%= coffee.id %>/delete" method="post">
     <input type="submit" name="" value="Delete Coffee">
   </form>
+</div>
+
+<div class="right">
+  <h4><%= coffee.name %></h4>
+  <p>Roasted by <%= coffee.roaster.name %> in <%= coffee.roaster.location %></p>
+  <p>Origin: <%= coffee.origin %></p>
+  <p>Process: <%= coffee.process %></p>
+  <p>Tastes like: <%= coffee.primary_taste %></p><% if coffee.profile == "Omni" %>
+  <p>Roasted for both Espresso and Filter</p>
+  <% else %>
+  <p>Roasted for <%= coffee.profile %></p>
+  <% end %>
+</div>
+
   <hr>
 
 <% end %>
