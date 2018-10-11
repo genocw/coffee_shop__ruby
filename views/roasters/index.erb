@@ -1,5 +1,3 @@
-
-<nav>
   <div class="box e">
     <h2><%=@title%></h2>
 
@@ -19,27 +17,30 @@
       <input type="submit" value="Go">
     </form>
   </div>
-</nav>
 
-<div class="box f">
+<div class="contentbox">
   <% for roaster in @roasters %>
-    <a href="/roasters/<%= roaster.id %>"><img id="roaster_img" src="<%= roaster.image %>"></a>
-    <form action="/roasters/<%= roaster.id %>/edit" method="get">
-      <input type="submit" value="Edit Roaster">
-    </form>
-    <form action="/roasters/<%= roaster.id %>/delete" method="post">
-      <input type="submit" value="Delete Roaster">
-    </form>
-    <form action="/roasters/<%= roaster.id %>" method="get">
-      <input type="submit" value="More Info">
-    </form>
-    <% end %>
-</div>
+    <div class="contentrow">
 
-<div class="box g">
-  <% for roaster in @roasters %>
-    <h3><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h3>
-    <h4><%= roaster.location %></h4>
-    <p><%= roaster.blurb_sml %></p>
+      <div class="left-side">
+        <a href="/roasters/<%= roaster.id %>"><img id="roaster_img" src="<%= roaster.image %>"></a>
+        <form action="/roasters/<%= roaster.id %>/edit" method="get">
+          <input type="submit" value="Edit Roaster">
+        </form>
+        <form action="/roasters/<%= roaster.id %>/delete" method="post">
+          <input type="submit" value="Delete Roaster">
+        </form>
+        <form action="/roasters/<%= roaster.id %>" method="get">
+          <input type="submit" value="More Info">
+        </form>
+      </div>
+
+      <div class="right-side">
+        <h3><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h3>
+        <h4><%= roaster.location %></h4>
+        <p><%= roaster.blurb_sml %></p>
+      </div>
+
+    </div>
   <% end %>
 </div>

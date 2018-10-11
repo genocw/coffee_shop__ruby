@@ -8,8 +8,6 @@ body {
 
 .wrapper {
   height: 100vh;
-  /* above height necessary! */
-
   display: grid;
   grid-gap: 10px;
   grid-template-areas:   "logo hd"
@@ -19,50 +17,48 @@ body {
   grid-template-rows: 1fr 1fr 6fr;
 }
 
-.box {
-  /* background-color: GoldenRod; */
-  /* color: #444444; */
-}
-
-.a {
+.logo {
   grid-area: logo;
 }
 
-.b {
+.brandname {
   grid-area: hd;
 }
 
-.c {
+.menu {
   grid-area: nav
 }
 
-.d {
+.yieldarea {
   grid-area: mn;
   display: grid;
-  /* grid-template-areas:   "top top"
-                         "left right"; */
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr 6fr; */
+  grid-template-areas:   "nv"
+                         "contentbox";
+  grid-template-columns: 1fr;
 }
 
-.e {
-  grid-area: top;
-  grid-column: 1 / 3;
-  grid-row: 1;
+.navbar {
+  grid-area: nv;
 }
 
-.f {
-  grid-area: left;
-  grid-column: 1;
-  grid-row: 2;
+.contentbox {
+  grid-area: contentbox;
 }
 
-.g {
-  grid-area: right;
-  grid-column: 2;
-  grid-row: 2;
+.contentrow {
+  grid-area: contentrow;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:   "leftside rightside";
+  grid-template-columns: 1fr 2fr;
 }
 
+.left-side{
+  grid-area: leftside;
+}
+.right-side{
+  grid-area: rightside;
+}
 
 section div img {
   max-width: 100%;
