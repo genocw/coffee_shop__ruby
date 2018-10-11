@@ -1,6 +1,5 @@
 
 <nav>
-
   <div class="box e">
     <h2><%=@title%></h2>
 
@@ -10,25 +9,46 @@
       </form>
     <% end %>
 
-  <form action="/roasters/filter-name" method="get">
-    <label for="filter_roaster">Filter List by Roaster:</label>
-    <select name="roaster_id" id="filter_roaster">
-      <% for roaster in @roasters %>
-        <option value="<%= roaster.id %>"><%= roaster.name %></option>
-      <% end %>
-    </select>
+    <form action="/roasters/filter-name" method="get">
+      <label for="filter_roaster">Filter List by Roaster:</label>
+      <select name="roaster_id" id="filter_roaster">
+        <% for roaster in @roasters %>
+          <option value="<%= roaster.id %>"><%= roaster.name %></option>
+        <% end %>
+      </select>
       <input type="submit" value="Go">
-  </form>
-
+    </form>
+  </div>
 </nav>
 
-<h1>Meet the Roasters</h1>
+<div class="box f">
+  <% for roaster in @roasters %>
+    <a href="/roasters/<%= roaster.id %>"><img id="roaster_img" src="<%= roaster.image %>"></a>
+    <form action="/roasters/<%= roaster.id %>/edit" method="get">
+      <input type="submit" value="Edit Roaster">
+    </form>
+    <form action="/roasters/<%= roaster.id %>/delete" method="post">
+      <input type="submit" value="Delete Roaster">
+    </form>
+    <form action="/roasters/<%= roaster.id %>" method="get">
+      <input type="submit" value="More Info">
+    </form>
+    <% end %>
+</div>
+
+<div class="box g">
+  <% for roaster in @roasters %>
+    <h3><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h3>
+    <h4><%= roaster.location %></h4>
+    <p><%= roaster.blurb_sml %></p>
+  <% end %>
+</div>
 
 <% for roaster in @roasters %>
 
-  <h4><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h4>
+  <h3><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h3>
   <a href="/roasters/<%= roaster.id %>"><img id="roaster_img" src="<%= roaster.image %>"></a>
-  <h5><%= roaster.location %></h5>
+  <h4><%= roaster.location %></h4>
   <p><%= roaster.blurb_sml %></p>
   <form action="/roasters/<%= roaster.id %>/delete" method="post">
     <input type="submit" value="Delete Roaster">

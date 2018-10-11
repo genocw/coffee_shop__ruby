@@ -1,5 +1,4 @@
 <nav>
-
   <div class="box e">
     <h2><%=@title%></h2>
 
@@ -30,7 +29,6 @@
       <input type="submit" value="Go">
     </form>
   </div>
-
 </nav>
 
 <div class="box f">
@@ -46,13 +44,12 @@
     <input type="submit" name="" value="More Info">
   </form>
   <% end %>
-  <hr>
 </div>
 
 <div class="box g">
 <% for coffee in @coffees %>
-  <h4><%= coffee.name %></h4>
-  <p>Roasted by <%= coffee.roaster.name %> in <%= coffee.roaster.location %></p>
+  <h3><a href="/beans/<%= coffee.id %>"><%= coffee.name %></a></h3>
+  <h4>Roasted by <%= coffee.roaster.name %> in <%= coffee.roaster.location %></h4>
   <p>Origin: <%= coffee.origin %></p>
   <p>Process: <%= coffee.process %></p>
   <p>Tastes like: <%= coffee.primary_taste %></p>
@@ -62,5 +59,4 @@
     <p>Roasted for <%= coffee.profile %></p>
     <% end %>
   <% end %>
-  <hr>
 </div>

@@ -89,7 +89,7 @@ end
 # INDEX
 get("/roasters") do
   @roasters = Roaster.all()
-  @title = "All Roasters"
+  @title = "Meet the Roasters"
   @show_add_new_coffee_button = true
   erb(:"/roasters/index")
 end
