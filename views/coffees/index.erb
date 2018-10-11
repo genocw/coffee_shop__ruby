@@ -1,32 +1,36 @@
   <div class="navbar">
-    <h2><%=@title%></h2>
+    <div>
+      <% if @show_add_new_coffee_button == true %>
+        <form  action="/beans/new" method="get">
+          <input type="submit" name="" value="Add New Coffee">
+        </form>
+      <% end %>
+    </div>
 
-    <% if @show_add_new_coffee_button == true %>
-      <form  action="/beans/new" method="get">
-        <input type="submit" name="" value="Add New Coffee">
+    <div>
+      <form action="/beans/filter-roaster" method="get">
+        <label for="filter_roaster">Filter List by Roaster:</label>
+        <select name="roaster_id" id="filter_roaster">
+          <% for roaster in @roasters %>
+            <option value="<%= roaster.id %>"><%= roaster.name %></option>
+          <% end %>
+        </select>
+        <input type="submit" value="Go">
       </form>
-    <% end %>
+    </div>
 
-    <form action="/beans/filter-roaster" method="get">
-      <label for="filter_roaster">Filter List by Roaster:</label>
-      <select name="roaster_id" id="filter_roaster">
-        <% for roaster in @roasters %>
-          <option value="<%= roaster.id %>"><%= roaster.name %></option>
-        <% end %>
-      </select>
-      <input type="submit" value="Go">
-    </form>
-
-    <form action="/beans/filter-profile" method="get">
-      <label for="filter_profile">Filter List by Roast Profile:</label>
-      <select name="roast_profile" id="filter_profile">
-          <option value="Espresso">Espresso</option>
-          <option value="Filter">Filter</option>
-          <option value="Decaf">Decaf</option>
-          <option value="Omni">Omni</option>
-      </select>
-      <input type="submit" value="Go">
-    </form>
+    <div>
+      <form action="/beans/filter-profile" method="get">
+        <label for="filter_profile">Filter List by Roast Profile:</label>
+        <select name="roast_profile" id="filter_profile">
+            <option value="Espresso">Espresso</option>
+            <option value="Filter">Filter</option>
+            <option value="Decaf">Decaf</option>
+            <option value="Omni">Omni</option>
+        </select>
+        <input type="submit" value="Go">
+      </form>
+    </div>
   </div>
 
 <div class="contentbox">
@@ -44,6 +48,7 @@
       <form  action="/beans/<%= coffee.id %>" method="get">
         <input type="submit" name="" value="More Info">
       </form>
+      <br>
       </div>
 
       <div class="right-side">
@@ -57,6 +62,7 @@
       <% else %>
         <p>Roasted for <%= coffee.profile %></p>
       <% end %>
+      <br>
       </div>
 
     </div>

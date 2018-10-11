@@ -86,3 +86,12 @@ nav ul {
   max-width: 12em;
   max-height: 12em;
 }
+
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:  "hd hd"
+                          "nv mn"
+                          "ft ft"
+  }
+}

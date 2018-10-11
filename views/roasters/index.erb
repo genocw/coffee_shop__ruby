@@ -1,21 +1,23 @@
-  <div class="box e">
-    <h2><%=@title%></h2>
+  <div class="navbar">
+    <div>
+      <% if @show_add_new_coffee_button == true %>
+        <form  action="/roasters/new" method="get">
+          <input type="submit" name="" value="Add New Roaster">
+        </form>
+      <% end %>
+    </div>
 
-    <% if @show_add_new_coffee_button == true %>
-      <form  action="/roasters/new" method="get">
-        <input type="submit" name="" value="Add New Roaster">
+    <div>
+      <form action="/roasters/filter-name" method="get">
+        <label for="filter_roaster">Filter List by Roaster:</label>
+        <select name="roaster_id" id="filter_roaster">
+          <% for roaster in @roasters %>
+            <option value="<%= roaster.id %>"><%= roaster.name %></option>
+          <% end %>
+        </select>
+        <input type="submit" value="Go">
       </form>
-    <% end %>
-
-    <form action="/roasters/filter-name" method="get">
-      <label for="filter_roaster">Filter List by Roaster:</label>
-      <select name="roaster_id" id="filter_roaster">
-        <% for roaster in @roasters %>
-          <option value="<%= roaster.id %>"><%= roaster.name %></option>
-        <% end %>
-      </select>
-      <input type="submit" value="Go">
-    </form>
+    </div>
   </div>
 
 <div class="contentbox">
