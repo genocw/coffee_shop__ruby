@@ -43,16 +43,3 @@
     <p><%= roaster.blurb_sml %></p>
   <% end %>
 </div>
-
-<% for roaster in @roasters %>
-
-  <h3><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h3>
-  <a href="/roasters/<%= roaster.id %>"><img id="roaster_img" src="<%= roaster.image %>"></a>
-  <h4><%= roaster.location %></h4>
-  <p><%= roaster.blurb_sml %></p>
-  <form action="/roasters/<%= roaster.id %>/delete" method="post">
-    <input type="submit" value="Delete Roaster">
-  </form>
-  <hr>
-
-<% end %>
