@@ -7,7 +7,6 @@
 
 body {
   background-image: url("/images/filter_table.jpg");
-  /* background-color: papayawhip; */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -142,17 +141,26 @@ div h2 {
   margin: 2em;
   padding: 1em;
   border: 1px solid #79a53e;
+  border-radius: 6px;
   align-items: center;
   justify-items: center;
   background-color: rgba(121, 165, 62, 0.20);
 }
 
-.left-side{
+.left-side {
   grid-area: leftside;
 }
-.right-side{
+
+.right-side {
   grid-area: rightside;
 }
+
+a {
+  text-decoration: none;
+  color: #576272;
+  text-decoration-style:
+}
+
 
 #coffee-img {
   max-width: 12em;
