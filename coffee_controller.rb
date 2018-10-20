@@ -6,9 +6,9 @@ require_relative( './models/roaster.rb')
 also_reload( './models/*' )
 
 
-# get("/") do
-#   erb(:land)
-# end
+get("/") do
+  redirect to "/beans"
+end
 
 # coffees
 # INDEX

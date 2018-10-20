@@ -66,6 +66,11 @@ body {
   /* padding-left: 10em; */
 }
 
+form label {
+  font-family: "Poppins", "Helvetica", sans-serif;
+
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -145,6 +150,11 @@ div h2 {
   align-items: center;
   justify-items: center;
   background-color: rgba(121, 165, 62, 0.20);
+}
+
+.contentrow h3, h4, p {
+  font-family: "Poppins", "Helvetica", sans-serif;
+
 }
 
 .left-side {
