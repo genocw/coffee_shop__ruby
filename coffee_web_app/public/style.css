@@ -1,0 +1,193 @@
+/*
+  google fonts
+  font-family: 'Roboto', sans-serif;
+  font-family: 'K2D', sans-serif;
+  font-family: 'Poppins', sans-serif;
+ */
+
+body {
+  background-image: url("/images/filter_table.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:   "logo hd"
+                         "logo nav"
+                         "mn mn";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 6fr;
+  padding-left: 3%;
+  padding-right: 7%;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.logo img {
+  max-height: 100%;
+  /* min-width: 100%; */
+}
+
+.brandname {
+  grid-area: hd;
+  /* text-align: center; */
+  font-family: "K2D", "Helvetica", sans-serif;
+  color: white;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.brandname h1 {
+  color: #6B7A8F;
+
+  border-radius: 290486px;
+  /* color: white; */
+  font-size: 1.3em;
+  letter-spacing: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+  margin-bottom: 0;
+  position: relative;
+  top: 1em;
+  /* right: 0.8em; */
+}
+
+.menu {
+  grid-area: nav;
+  /* padding-left: 10em; */
+}
+
+form label {
+  font-family: "Poppins", "Helvetica", sans-serif;
+
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  padding: 1em;
+}
+
+.menu li {
+  display: inline;
+  font-family: "Poppins", "Helvetica", sans-serif;
+  position: relative;
+  right: 4em;
+  /* float: left;
+  text-align: center; */
+}
+
+.menu li a {
+  color: #6B7A8F;
+  /* display: block; */
+  /* padding: 8px; */
+  background-color: #dddddd;
+
+  border: 1px solid #79a53e;
+  border-radius: 290486px;
+  /* color: white; */
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+}
+
+.menu li a:hover {
+  background:  #79a53e;
+  color: white;
+}
+
+.yieldarea {
+  grid-area: mn;
+  display: grid;
+  grid-template-areas:   "nv"
+                         "contentbox";
+  grid-template-columns: 1fr;
+}
+
+div h2 {
+  text-align: center;
+  border:
+}
+
+.navbar {
+  grid-area: nv;
+}
+
+.navbar div {
+  display: inline-block;
+}
+
+.contentbox {
+  grid-area: contentbox;
+}
+
+.contentrow {
+  grid-area: contentrow;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:   "leftside rightside";
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  margin: 2em;
+  padding: 1em;
+  border: 1px solid #79a53e;
+  border-radius: 6px;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(121, 165, 62, 0.20);
+}
+
+.contentrow h3, h4, p {
+  font-family: "Poppins", "Helvetica", sans-serif;
+
+}
+
+.left-side {
+  grid-area: leftside;
+}
+
+.right-side {
+  grid-area: rightside;
+}
+
+a {
+  text-decoration: none;
+  color: #576272;
+  text-decoration-style:
+}
+
+
+#coffee-img {
+  max-width: 12em;
+  max-height: 12em;
+}
+
+#roaster_img {
+  max-width: 12em;
+  max-height: 12em;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:  "logo"
+                          "hd"
+                          "nv"
+                          "mn"
+  }
+}
