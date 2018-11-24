@@ -1,0 +1,48 @@
+  <div class="navbar">
+    <div>
+      <% if @show_add_new_coffee_button == true %>
+        <form  action="/roasters/new" method="get">
+          <input type="submit" name="" value="Add New Roaster">
+        </form>
+      <% end %>
+    </div>
+
+    <div>
+      <form action="/roasters/filter-name" method="get">
+        <label for="filter_roaster">Filter List by Roaster:</label>
+        <select name="roaster_id" id="filter_roaster">
+          <% for roaster in @roasters %>
+            <option value="<%= roaster.id %>"><%= roaster.name %></option>
+          <% end %>
+        </select>
+        <input type="submit" value="Go">
+      </form>
+    </div>
+  </div>
+
+<div class="contentbox">
+  <% for roaster in @roasters %>
+    <div class="contentrow">
+
+      <div class="left-side">
+        <a href="/roasters/<%= roaster.id %>"><img id="roaster_img" src="<%= roaster.image %>"></a>
+        <form action="/roasters/<%= roaster.id %>/edit" method="get">
+          <input type="submit" value="Edit Roaster">
+        </form>
+        <form action="/roasters/<%= roaster.id %>/delete" method="post">
+          <input type="submit" value="Delete Roaster">
+        </form>
+        <form action="/roasters/<%= roaster.id %>" method="get">
+          <input type="submit" value="More Info">
+        </form>
+      </div>
+
+      <div class="right-side">
+        <h3><a href="/roasters/<%= roaster.id %>"><%= roaster.name %></a></h3>
+        <h4><%= roaster.location %></h4>
+        <p><%= roaster.blurb_sml %></p>
+      </div>
+
+    </div>
+  <% end %>
+</div>

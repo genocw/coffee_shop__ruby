@@ -1,0 +1,70 @@
+  <div class="navbar">
+    <div>
+      <% if @show_add_new_coffee_button == true %>
+        <form  action="/beans/new" method="get">
+          <input type="submit" name="" value="Add New Coffee">
+        </form>
+      <% end %>
+    </div>
+
+    <div>
+      <form action="/beans/filter-roaster" method="get">
+        <label for="filter_roaster">Filter List by Roaster:</label>
+        <select name="roaster_id" id="filter_roaster">
+          <% for roaster in @roasters %>
+            <option value="<%= roaster.id %>"><%= roaster.name %></option>
+          <% end %>
+        </select>
+        <input type="submit" value="Go">
+      </form>
+    </div>
+
+    <div>
+      <form action="/beans/filter-profile" method="get">
+        <label for="filter_profile">Filter List by Roast Profile:</label>
+        <select name="roast_profile" id="filter_profile">
+            <option value="Espresso">Espresso</option>
+            <option value="Filter">Filter</option>
+            <option value="Decaf">Decaf</option>
+            <option value="Omni">Omni</option>
+        </select>
+        <input type="submit" value="Go">
+      </form>
+    </div>
+  </div>
+
+<div class="contentbox">
+  <% for coffee in @coffees %>
+    <div class="contentrow">
+
+      <div class="left-side">
+      <a href="/beans/<%= coffee.id %>"><img id="coffee-img" src= <%= coffee.image %> > </a>
+      <form  action="/beans/<%= coffee.id %>/edit" method="get">
+        <input type="submit" name="" value="Edit Coffee">
+      </form>
+      <form  action="/beans/<%= coffee.id %>/delete" method="post">
+        <input type="submit" name="" value="Delete Coffee">
+      </form>
+      <form  action="/beans/<%= coffee.id %>" method="get">
+        <input type="submit" name="" value="More Info">
+      </form>
+      <br>
+      </div>
+
+      <div class="right-side">
+      <h3><a href="/beans/<%= coffee.id %>"><%= coffee.name %></a></h3>
+      <h4>Roasted by <%= coffee.roaster.name %> in <%= coffee.roaster.location %></h4>
+      <p>Origin: <%= coffee.origin %></p>
+      <p>Process: <%= coffee.process %></p>
+      <p>Tastes like: <%= coffee.primary_taste %></p>
+      <% if coffee.profile == "Omni" %>
+        <p>Roasted for both Espresso and Filter</p>
+      <% else %>
+        <p>Roasted for <%= coffee.profile %></p>
+      <% end %>
+      <br>
+      </div>
+
+    </div>
+  <% end %>
+</div>
